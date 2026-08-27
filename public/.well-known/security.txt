@@ -1,0 +1,5 @@
+Contact: mailto:mehranarzani@yahoo.com
+Expires: 2027-08-16T00:00:00Z
+Preferred-Languages: en
+Canonical: https://mehranarzani.com/.well-known/security.txt
+Policy: https://mehranarzani.com/
