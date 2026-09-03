@@ -1,7 +1,7 @@
-import type {Metadata} from "next";
 import {SiteHeader} from "../components/SiteChrome";
+import {pageMetadata} from "../seo";
 
-export const metadata:Metadata={title:"Research, Teaching & Engineering Awards",description:"Awards recognizing Mehran Arzani's battery research, chemical engineering, teaching, mentorship, and academic excellence.",alternates:{canonical:"/awards"}};
+export const metadata=pageMetadata("Research, Teaching & Engineering Awards","Awards recognizing Mehran Arzani's achievements in battery research, chemical engineering, teaching, mentorship, and academic excellence.","/awards");
 
 const awards=[
  {year:"2013",title:"B.S. Chemical Engineering · First Rank / Top 1%",org:"Azad University · Esfahan",category:"Academic Excellence",links:[]},

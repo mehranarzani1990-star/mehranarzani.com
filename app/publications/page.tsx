@@ -1,8 +1,8 @@
-import type {Metadata} from "next";
 import {SiteHeader} from "../components/SiteChrome";
 import PublicationExplorer from "./PublicationExplorer";
+import {pageMetadata} from "../seo";
 
-export const metadata:Metadata={title:"Battery, Membrane & MOF Publications",description:"Peer-reviewed battery, electrolyte, membrane, MOF, and electrocatalysis publications by chemical engineering researcher Mehran Arzani.",alternates:{canonical:"/publications"}};
+export const metadata=pageMetadata("Battery, Membrane & MOF Publications","Peer-reviewed research by Mehran Arzani on batteries, porous-liquid electrolytes, MOFs, electrocatalysis, and ceramic and polymeric membranes.","/publications");
 
 const publications=[
  {year:"2026",topic:"Electrocatalysis",journal:"ACS Applied Materials & Interfaces",title:"Intrinsically Conductive π-d Conjugated Layers with Co-N₄ Active Sites for Efficient Nitrate Electrocatalysis and Zinc-Nitrate Batteries",url:"https://pubs.acs.org/doi/10.1021/acsami.6c00231"},

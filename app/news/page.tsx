@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
 import { PageFooter, PageHero, SiteHeader } from "../components/SiteChrome";
 import PorousIonAnimation from "./PorousIonAnimation";
+import { pageMetadata } from "../seo";
 import "./news.css";
 
-export const metadata: Metadata = {title:"Battery Research News & Publications",description:"Research updates and recent publications from Mehran Arzani in batteries, porous materials, membranes, and electrocatalysis.",alternates:{canonical:"/news"}};
+export const metadata = pageMetadata("Battery Research News & Professional Updates","Research news, publications, conference updates, and professional milestones from Mehran Arzani in batteries, porous materials, membranes, and electrocatalysis.","/news");
 
 const news = [
   {
@@ -32,6 +32,18 @@ const news = [
   },
 ];
 
+const linkedinPosts = [
+  {
+    date: "August 2026",
+    title: "A Memorable Meeting with Professor Yury Gogotsi at ACS Fall 2026",
+    summary:
+      "After three years of looking forward to this opportunity, I had the honor of meeting Professor Yury Gogotsi in Chicago and briefly discussing battery and energy-storage research.",
+    image: "/linkedin-news/acs-fall-2026-yury-gogotsi.png",
+    imageAlt: "Mehran Arzani with Professor Yury Gogotsi at ACS Fall 2026 in Chicago",
+    url: "https://lnkd.in/p/gSNkmhBn",
+  },
+];
+
 export default function News() {
   return (
     <main className="profile-subpage news-page" id="top">
@@ -43,10 +55,28 @@ export default function News() {
         description="Research milestones, university recognition, professional honors, and selected developments in battery technology."
       />
 
-      <section className="news-editorial-banner section" aria-label="Battery technology news">
-        <div className="news-editorial-copy">
-          <span>BATTERY TECHNOLOGY · RESEARCH · INDUSTRY</span>
-          <h2>Tracking the science and engineering shaping next-generation energy storage</h2>
+      <section className="linkedin-updates section" aria-labelledby="linkedin-updates-title">
+        <div className="linkedin-updates-heading">
+          <div>
+            <p className="section-kicker">FROM LINKEDIN</p>
+            <h2 id="linkedin-updates-title">Professional Updates</h2>
+          </div>
+          <span>Selected moments from research, conferences, and professional activities.</span>
+        </div>
+        <div className="linkedin-update-list">
+          {linkedinPosts.map((post) => (
+            <article className="linkedin-news-card" key={post.url}>
+              <img src={post.image} alt={post.imageAlt} />
+              <div className="linkedin-news-copy">
+                <p><span aria-hidden="true">in</span> LINKEDIN NEWS · {post.date}</p>
+                <h3>{post.title}</h3>
+                <div>{post.summary}</div>
+                <a href={post.url} target="_blank" rel="noreferrer">
+                  View LinkedIn post <b>↗</b>
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 

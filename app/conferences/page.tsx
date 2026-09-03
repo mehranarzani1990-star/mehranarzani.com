@@ -1,7 +1,7 @@
-import type {Metadata} from "next";
 import {PageFooter,PageHero,SiteHeader} from "../components/SiteChrome";
+import {pageMetadata} from "../seo";
 
-export const metadata:Metadata={title:"Battery & Electrolyte Conference Presentations",description:"Conference abstracts and presentations by Mehran Arzani on battery electrolytes, porous liquids, ion transport, and energy storage.",alternates:{canonical:"/conferences"}};
+export const metadata=pageMetadata("Battery & Electrolyte Conference Presentations","Conference abstracts and presentations by Mehran Arzani on battery electrolytes, porous liquids, ion transport, lithium–oxygen batteries, and energy storage.","/conferences");
 
 const talks=[
   {year:"2025",event:"Electrochemical Society Meeting Abstracts 248",format:"Conference abstract",title:"Contribution of Porous Liquids for Enhanced Battery Electrolyte Stability and Mobility",url:"https://iopscience.iop.org/article/10.1149/MA2025-02136mtgabs"},

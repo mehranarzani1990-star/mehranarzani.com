@@ -1,7 +1,7 @@
-import type {Metadata} from "next";
 import {PageFooter,PageHero,SiteHeader} from "../components/SiteChrome";
+import {pageMetadata} from "../seo";
 
-export const metadata:Metadata={title:"Chemical Engineering Books",description:"Chemical engineering books by Mehran Arzani covering fluid mechanics and gas separation using liquid membranes.",alternates:{canonical:"/books"}};
+export const metadata=pageMetadata("Chemical Engineering Books","Chemical engineering books by Mehran Arzani covering fluid mechanics and gas separation using liquid-membrane technologies.","/books");
 
 const books=[
   {title:"Fluid Mechanics",year:"2015",publisher:"Azad University of Shahreza",authors:"Mehdi Reiszadeh · Mehran Arzani",image:"/book-fluid-mechanics.png",alt:"Farsi cover of the Fluid Mechanics textbook by Mehdi Reiszadeh and Mehran Arzani",description:"The subject matter and properties of fluids—liquids and gases—as well as the forces that influence them are investigated in fluid mechanics. Published by Azad University of Shahreza, this academic book aims to provide undergraduate students with a comprehensive understanding of fluid-mechanics principles."},

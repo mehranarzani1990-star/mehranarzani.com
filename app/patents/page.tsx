@@ -1,7 +1,7 @@
-import type {Metadata} from "next";
 import {PageFooter,PageHero,SiteHeader} from "../components/SiteChrome";
+import {pageMetadata} from "../seo";
 
-export const metadata:Metadata={title:"Multichannel Ceramic Membrane Patent",description:"Mehran Arzani's patented multichannel mullite ceramic membrane for drinking-water treatment and reverse-osmosis pretreatment.",alternates:{canonical:"/patents"}};
+export const metadata=pageMetadata("Drinking-Water Ceramic Membrane Patent","Mehran Arzani's patented multichannel mullite ceramic membrane for drinking-water treatment, microfiltration, and reverse-osmosis pretreatment.","/patents");
 
 export default function Patents(){return <main className="profile-subpage patent-page" id="top">
   <SiteHeader active="Patents"/>

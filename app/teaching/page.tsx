@@ -1,7 +1,7 @@
-import type {Metadata} from "next";
 import {PageFooter,PageHero,SiteHeader} from "../components/SiteChrome";
+import {pageMetadata} from "../seo";
 
-export const metadata:Metadata={title:"Teaching & Battery Research Mentorship",description:"Teaching, laboratory training, innovation, and independent research mentorship by Mehran Arzani in chemical engineering and battery science.",alternates:{canonical:"/teaching"}};
+export const metadata=pageMetadata("Teaching & Battery Research Mentorship","Chemical engineering instruction and hands-on battery research mentorship by Mehran Arzani, spanning electrode fabrication, cell assembly, testing, and diagnostics.","/teaching");
 
 const areas=[
   {label:"UIC teaching",title:"Chemical engineering and interdisciplinary instruction",items:["Transport Phenomena I–III","Chemical Reaction Engineering","Renewable Energy","Entrepreneurship in Engineering","Materials Science","BIO 351"]},
@@ -53,7 +53,7 @@ export default function Teaching(){return <main className="profile-subpage teach
 
   <section className="mentorship-showcase section" aria-labelledby="mentorship-title">
     <div className="mentorship-heading"><div><p className="section-kicker">LABORATORY MENTORSHIP</p><h2 id="mentorship-title">Learning through research</h2></div><p>Hands-on guidance across electrode preparation, controlled-atmosphere cell assembly, electrochemical testing, and data interpretation.</p></div>
-    <div className="mentorship-mosaic">{mentorshipImages.map(([src,alt,label],i)=><figure className={`mentorship-frame mentorship-frame-${i+1}`} key={src}><img src={src} alt={alt} loading="lazy"/><figcaption><span>{String(i+1).padStart(2,"0")}</span>{label}</figcaption></figure>)}</div>
+    <div className="mentorship-mosaic">{mentorshipImages.map(([src,alt],i)=><figure className={`mentorship-frame mentorship-frame-${i+1}`} key={src}><img src={src} alt={alt} loading="lazy"/></figure>)}</div>
     <aside className="profile-note teaching-recognition"><strong>Training recognition</strong><p>Certificate of Excellence in Training and Mentorship, Berry Research Laboratory, University of Illinois Chicago · August 2024.</p></aside>
   </section>
   <PageFooter/>

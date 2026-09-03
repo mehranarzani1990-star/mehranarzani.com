@@ -35,7 +35,7 @@ export default function MicroInteractions(){
     targets.forEach(el=>observer?observer.observe(el):el.classList.add("is-visible"));
 
     const reactive=Array.from(document.querySelectorAll<HTMLElement>(
-      ".publication-item, .award-grid article, .news-grid article, .conference-photos figure, .award-photos figure, .teaching-grid article, .book-card, .patent-card, .profile-link, .about-profile-links a"
+      ".publication-item, .award-grid article, .news-grid article, .conference-photos figure, .award-photos figure, .teaching-grid article, .book-card, .patent-card, .profile-link, .about-profile-links a, .about-professional-copy, .education-stack, .expertise-card"
     ));
     const move=(event:PointerEvent)=>{
       const el=event.currentTarget as HTMLElement;

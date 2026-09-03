@@ -124,3 +124,69 @@ h1,h2,h3,p,li,dt,dd,a,strong,span{overflow-wrap:break-word}
   .learning-lab{padding-top:14px!important}.learning-lab article{min-height:195px!important}
   .teaching-opening-gallery figure,.teaching-opening-gallery figure:nth-child(2),.teaching-opening-gallery figure:nth-child(3){min-height:220px!important}
 }
+
+/* Homepage battery animation: compact, centered, and fully contained on phones. */
+@media(max-width:760px){
+  .interface-visual.battery-animation{
+    width:100%!important;
+    height:340px!important;
+    min-height:340px!important;
+    margin:8px 0 18px!important;
+    padding:8px!important;
+    overflow:hidden;
+    box-sizing:border-box;
+  }
+  .interface-visual.battery-animation .battery-shell{
+    width:min(calc(100% - 64px),320px)!important;
+    height:210px!important;
+    margin-inline:auto;
+  }
+  .interface-visual.battery-animation .battery-shell .cell-layer>span{
+    padding:4px 5px;
+    font-size:8px;
+    letter-spacing:.025em;
+    white-space:nowrap;
+  }
+  .interface-visual.battery-animation .ev-road-scene:not(.eco-ev-cycle){
+    left:28px;
+    right:8px;
+    bottom:44px;
+  }
+  .interface-visual.battery-animation .battery-modes{
+    bottom:5px;
+    width:min(238px,76%);
+  }
+}
+
+@media(max-width:420px){
+  .interface-visual.battery-animation{
+    height:305px!important;
+    min-height:305px!important;
+    border-radius:18px;
+  }
+  .interface-visual.battery-animation .battery-shell{
+    width:min(calc(100% - 54px),278px)!important;
+    height:182px!important;
+  }
+  .interface-visual.battery-animation .battery-shell:before{
+    right:-21px;
+    top:29px;
+    width:18px;
+    height:44px;
+  }
+  .interface-visual.battery-animation .battery-shell .cell-layer>span{
+    padding:3px 4px;
+    font-size:7px;
+  }
+  .interface-visual.battery-animation .ev-road-scene:not(.eco-ev-cycle){
+    left:24px;
+    bottom:40px;
+    height:76px;
+  }
+  .interface-visual.battery-animation .battery-modes{
+    width:min(218px,78%);
+    height:32px;
+    font-size:8px;
+  }
+  .interface-visual.battery-animation .battery-modes b{font-size:7px}
+}
