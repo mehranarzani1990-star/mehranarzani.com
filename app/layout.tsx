@@ -53,13 +53,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: "Mehran Arzani | Battery Engineer & Energy Storage Researcher",
     description: "Battery and chemical engineering research spanning electrode fabrication, electrolyte engineering, electrochemical interfaces, diagnostics, and next-generation energy storage.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Mehran Arzani — Battery Engineer & Energy Storage Researcher" }],
+    images: [{ url: "/mehran-arzani-portrait.png", alt: "Mehran Arzani, Battery Engineer and Energy Storage Researcher" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mehran Arzani | Battery Engineer & Energy Storage Researcher",
     description: "Battery and chemical engineering research spanning electrode fabrication, electrolyte engineering, electrochemical interfaces, diagnostics, and next-generation energy storage.",
-    images: ["/og.png"],
+    images: ["/mehran-arzani-portrait.png"],
   },
   robots: {
     index: true,
@@ -86,11 +86,19 @@ const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "ImageObject",
+      "@id": "https://mehranarzani.com/#primaryimage",
+      url: "https://mehranarzani.com/mehran-arzani-portrait.png",
+      contentUrl: "https://mehranarzani.com/mehran-arzani-portrait.png",
+      caption: "Mehran Arzani, Battery Engineer and Energy Storage Researcher",
+      representativeOfPage: true,
+    },
+    {
       "@type": "Person",
       "@id": "https://mehranarzani.com/#person",
       name: "Mehran Arzani",
       url: "https://mehranarzani.com",
-      image: "https://mehranarzani.com/mehran-arzani-portrait.png",
+      image: { "@id": "https://mehranarzani.com/#primaryimage" },
       jobTitle: "Battery Engineer and Chemical Engineering Researcher",
       description: "Battery engineer specializing in electrode processing, advanced electrolytes, lithium–oxygen batteries, electrochemical diagnostics, and scalable manufacturing.",
       affiliation: {
@@ -134,6 +142,7 @@ const structuredData = {
       url: "https://mehranarzani.com",
       name: "Mehran Arzani | Battery Engineer & Energy Storage Researcher",
       mainEntity: { "@id": "https://mehranarzani.com/#person" },
+      primaryImageOfPage: { "@id": "https://mehranarzani.com/#primaryimage" },
       isPartOf: { "@id": "https://mehranarzani.com/#website" },
     },
   ],
