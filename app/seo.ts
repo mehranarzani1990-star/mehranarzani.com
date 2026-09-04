@@ -12,15 +12,17 @@ export function pageMetadata(
   title: string,
   description: string,
   path: string,
+  absoluteTitle?: string,
 ): Metadata {
+  const resolvedTitle = absoluteTitle ?? title;
   return {
-    title,
+    title: absoluteTitle ? { absolute: absoluteTitle } : title,
     description,
     alternates: { canonical: path },
     openGraph: {
       type: "website",
       url: path,
-      title,
+      title: resolvedTitle,
       description,
       siteName: SITE_NAME,
       locale: "en_US",
@@ -28,7 +30,7 @@ export function pageMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: resolvedTitle,
       description,
       images: [SOCIAL_IMAGE.url],
     },
