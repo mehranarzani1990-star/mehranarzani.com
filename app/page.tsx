@@ -3,7 +3,7 @@ import {PearlButton} from "./components/ui/pearl-button";
 import {EnergyJourney} from "./components/EnergyJourney";
 import {CellAssemblyStory} from "./components/CellAssemblyStory";
 import {pageMetadata} from "./seo";
-export const metadata=pageMetadata("Battery Engineer & Energy Storage Researcher","Mehran Arzani develops electrodes, advanced electrolytes, lithium–oxygen batteries, diagnostics, and scalable battery-manufacturing processes.","/");
+export const metadata=pageMetadata("Battery Engineer & Energy Storage Researcher","Mehran Arzani develops electrodes, advanced electrolytes, lithium–oxygen batteries, diagnostics, and scalable battery-manufacturing processes.","/","Mehran Arzani | Battery Engineer & Energy Storage Researcher");
 const Arrow=()=> <span aria-hidden="true">↗</span>;
 export default function Home(){return <main>
   <header className="site-header home-header"><div className="home-header-inner"><a className="brand" href="#top" aria-label="Mehran Arzani home">MEHRAN ARZANI</a><nav className="expanded-nav" aria-label="Primary navigation"><a href="#about">About</a><a href="#research">Education &amp; Research Interests</a><a className="publication-nav" href="/publications"><span className="publication-icon" aria-hidden="true">▤</span> Publications</a><a className="award-nav" href="/awards"><span className="award-icon" aria-hidden="true">✦</span> Awards</a><a href="/conferences">Conferences</a><a href="/books">Books</a><a href="/patents">Patents</a><a href="/teaching">Teaching</a><a href="/news">News</a><a href="#contact">Contact</a></nav><MobileNav/></div></header>
