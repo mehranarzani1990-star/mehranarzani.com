@@ -132,7 +132,7 @@ const structuredData = {
       "@type": "ProfilePage",
       "@id": "https://mehranarzani.com/#profile",
       url: "https://mehranarzani.com",
-      name: "Mehran Arzani — Battery Engineer & Energy Storage Researcher",
+      name: "Mehran Arzani | Battery Engineer & Energy Storage Researcher",
       mainEntity: { "@id": "https://mehranarzani.com/#person" },
       isPartOf: { "@id": "https://mehranarzani.com/#website" },
     },
